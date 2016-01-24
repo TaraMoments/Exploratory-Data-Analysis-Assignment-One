@@ -4,8 +4,8 @@ temp <- read.csv('household_power_consumption.txt', stringsAsFactors=FALSE,
 
 temp$Date <- as.Date(temp$Date, format = '%d/%m/%Y')
 
-# Plot4 appears to plot energy sub-metering for the first few observations 
-# observed on Feb 01 and 02  (Thursday, Friday)
+# Plot4 appears to plot the first few data observed
+# on Feb 01 and 02  (Thursday, Friday)
 dat <- subset(temp, temp$Date >= '2007-02-01' &
                   temp$Date < '2007-02-03')
 
