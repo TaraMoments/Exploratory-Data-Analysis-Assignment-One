@@ -2,10 +2,10 @@
 temp <- read.csv('household_power_consumption.txt', stringsAsFactors=FALSE, 
                  sep = ';', na.strings = '?')
 
-# Combine date and time as one timestamp 
+# Convert data
 temp$Date <- as.Date(temp$Date, format = '%d/%m/%Y')
 
-# Plot3 appears to plot global active power for the first few observations 
+# Plot3 appears to plot energy sub-metering for the first few observations 
 # observed on Feb 01 and 02  (Thursday, Friday)
 dat <- subset(temp, temp$Date >= '2007-02-01' &
                   temp$Date < '2007-02-03')
